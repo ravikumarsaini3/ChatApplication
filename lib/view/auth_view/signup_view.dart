@@ -60,14 +60,6 @@ class _SignupViewState extends State<SignupView> {
                 SizedBox(
                   height: height * 0.04,
                 ),
-                TextFormField(
-                  keyboardType: TextInputType.phone,
-                  controller: mobilecontroller,
-                  decoration: const InputDecoration(
-                      labelText: 'mobile',
-                      hintText: 'Enter mobile number',
-                      prefixIcon: Icon(Icons.call)),
-                ),
                 SizedBox(
                   height: height * 0.01,
                 ),
@@ -90,6 +82,13 @@ class _SignupViewState extends State<SignupView> {
                 ),
                 SizedBox(
                   height: height * 0.01,
+                ),
+                TextFormField(
+                  controller: mobilecontroller,
+                  decoration: const InputDecoration(
+                      labelText: 'password',
+                      hintText: 'enter your  password ',
+                      prefixIcon: Icon(Icons.lock)),
                 ),
                 SizedBox(
                   height: height * 0.1,
