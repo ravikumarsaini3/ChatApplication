@@ -3,6 +3,8 @@
     <application
         android:label="chat"
         
+
+        
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

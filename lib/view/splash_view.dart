@@ -70,7 +70,7 @@ class _SplashViewState extends State<SplashView>
                       ),
                     ),
                     TextSpan(
-                      text: 'to the Chat Application',
+                      text: 'to the home page',
                       style: TextStyle(
                         color: Colors.white70,
                         fontSize: 20,

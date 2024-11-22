@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:chat/view/auth_view/signup_view.dart';
-import 'package:chat/view/chat_view.dart';
+
+import 'package:chat/view/home_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class Splashservice {
         () {
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
-              return const ChatView();
+              return const HomeView();
             },
           ));
         },

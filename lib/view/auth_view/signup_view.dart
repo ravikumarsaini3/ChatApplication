@@ -4,6 +4,7 @@ import 'package:chat/utilities/custombutton/customtextbutton.dart';
 import 'package:chat/view/auth_view/login_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({super.key});
@@ -14,6 +15,7 @@ class SignupView extends StatefulWidget {
 
 class _SignupViewState extends State<SignupView> {
   var auth = FirebaseAuth.instance;
+  final signupController = Get.put(ASignupService());
   var emailcontroller = TextEditingController();
   var mobilecontroller = TextEditingController();
 
@@ -26,7 +28,7 @@ class _SignupViewState extends State<SignupView> {
         centerTitle: true,
         backgroundColor: Colors.teal.shade900,
         title: const Text(
-          'Chat Application',
+          'Sign up',
           style: TextStyle(color: Colors.white, fontSize: 25),
         ),
       ),
@@ -96,8 +98,10 @@ class _SignupViewState extends State<SignupView> {
                     title: 'Signup',
                     onpressed: () {
                       ASignupService Signup = ASignupService();
-                      Signup.SignupService(emailcontroller.text.trim(),
-                          mobilecontroller.text, context);
+                      signupController.signupService(
+                        emailcontroller.text.trim(),
+                        mobilecontroller.text,
+                      );
                     }),
                 SizedBox(
                   height: height * 0.02,
